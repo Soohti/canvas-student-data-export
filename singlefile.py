@@ -1,7 +1,7 @@
 from subprocess import run
 
 SINGLEFILE_BINARY_PATH = "./node_modules/single-file/cli/single-file"
-CHROME_PATH = "C:/Program Files/Google\ Chrome/Application/chrome.exe" #Uncomment this and set your browser exe if it can't find yours.
+CHROME_PATH = "/Volumes/Macintosh HD/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" #Uncomment this and set your browser exe if it can't find yours.
 
 def addQuotes(str):
     return "\"" + str.strip("\"") + "\""
@@ -9,7 +9,7 @@ def addQuotes(str):
 def download_page(url, cookies_path, output_path, output_name_template = ""):
     args = [
         addQuotes(SINGLEFILE_BINARY_PATH),
-        #"--browser-executable-path=" + addQuotes(CHROME_PATH.strip("\"")), #Uncomment this and set your browser exe if it can't find yours.
+        "--browser-executable-path=" + addQuotes(CHROME_PATH.strip("\"")), #Uncomment this and set your browser exe if it can't find yours.
         "--browser-cookies-file=" + addQuotes(cookies_path),
         "--output-directory=" + addQuotes(output_path),
         addQuotes(url)
