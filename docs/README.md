@@ -80,5 +80,11 @@ COOKIES_PATH: < Path to cookies file >
 You can then run the script as normal:
 `python export.py`
 
+## Useful commands
+
+```bash
+find . -type f -size +100M -exec git lfs track {} \;
+```
+
 # Contribute
 I would love to see this script's functionality expanded and improved! I welcome all pull requests :) Thank you!
